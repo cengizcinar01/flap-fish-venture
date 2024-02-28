@@ -5,6 +5,16 @@ class Game {
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.player = new Player(this);
+
+        window.addEventListener('resize', (e) => {
+            this.resize();
+        });
+    }
+    resize() {
+        this.canvas.width = e.currentTarget.innerWidth;
+        this.canvas.height = e.currentTarget.innerHeight;
+        this.width = this.canvas.width;
+        this.height = this.canvas.height;
     }
     render() {
         this.ctx.fillStyle = 'red';
