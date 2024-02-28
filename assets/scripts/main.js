@@ -7,16 +7,16 @@ class Game {
         this.player = new Player(this);
 
         window.addEventListener('resize', (e) => {
-            this.resize();
+            this.resize(e.currentTarget.innerWidth, e.currentTarget.innerHeight);
         });
     }
-    resize() {
-        this.canvas.width = e.currentTarget.innerWidth;
-        this.canvas.height = e.currentTarget.innerHeight;
+    resize(width, height) {
+        this.canvas.width = width;
+        this.canvas.height = height;
         this.width = this.canvas.width;
         this.height = this.canvas.height;
     }
-    render() {
+    render(width, height) {
         this.ctx.fillStyle = 'red';
         this.player.update();
         this.player.draw();
