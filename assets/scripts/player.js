@@ -7,6 +7,6 @@ class Player {
         this.height = 100;
     }
     draw() {
-        this.game.ctx, fillRect(this.x, this.y, this.width, this.height);
+        this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
