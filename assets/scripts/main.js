@@ -15,11 +15,11 @@ class Game {
     resize(width, height) {
         this.canvas.width = width;
         this.canvas.height = height;
+        this.ctx.fillStyle = 'red';
         this.width = this.canvas.width;
         this.height = this.canvas.height;
     }
     render() {
-        // this.ctx.fillStyle = 'red';
         this.player.update();
         this.player.draw();
     }
@@ -30,7 +30,6 @@ window.addEventListener('load', function () {
     const ctx = canvas.getContext('2d');
     canvas.width = 720;
     canvas.height = 720;
-    
 
     const game = new Game(canvas, ctx);
 
