@@ -6,7 +6,8 @@ class Game {
         this.height = this.canvas.height;
     }
     render() {
-        this.ctx.fillRect(100, 100, 50, 150);
+        this.ctx.fillStyle = 'red';
+        this.ctx.fillRect(100, 200, 350, 150);
     }
 }
 
@@ -17,4 +18,5 @@ window.addEventListener('load', function () {
     canvas.height = 720;
 
     const game = new Game(canvas, ctx);
+    game.render();
 });
