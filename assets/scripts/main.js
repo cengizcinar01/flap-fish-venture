@@ -20,6 +20,8 @@ class Game {
         this.ctx.fillStyle = 'red';
         this.width = this.canvas.width;
         this.height = this.canvas.height;
+        this.ratio = this.height / this.baseHeight;
+        console.log(this.height, this.baseHeight, this.ratio);
     }
     render() {
         this.player.update();
