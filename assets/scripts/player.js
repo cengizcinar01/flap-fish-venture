@@ -3,6 +3,8 @@ class Player {
         this.game = game;
         this.x = 50;
         this.y = 60;
+        this.spriteWidth = 200;
+        this.spriteHeight = 200;
         this.width = 200;
         this.height = 200;
     }
@@ -11,5 +13,9 @@ class Player {
     }
     update() {
         //this.x++;
+    }
+    resize() {
+        this.width = this.spriteWidth * this.game.ratio;
+        this.height = this.spriteHeight * this.game.ratio;
     }
 }
