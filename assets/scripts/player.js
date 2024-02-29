@@ -17,6 +17,9 @@ class Player {
         if (this.y < this.game.height - this.height) {
             this.speedY += this.game.gravity;
         }
+        if (this.y >= this.game.height - this.height) {
+            this.y = this.game.height - this.height;
+        }
     }
     resize() {
         this.width = this.spriteWidth * this.game.ratio;
