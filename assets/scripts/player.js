@@ -12,7 +12,9 @@ class Player {
         this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     update() {
-        //this.x++;
+        if (this.y < this.game.height - this.height) {
+            this.y += this.game.gravity;
+        }
     }
     resize() {
         this.width = this.spriteWidth * this.game.ratio;
