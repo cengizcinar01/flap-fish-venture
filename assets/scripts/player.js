@@ -1,12 +1,12 @@
 class Player {
     constructor(game) {
         this.game = game;
-        this.x = 50;
-        this.y = 60;
+        this.x = 20;
+        this.y = 0;
         this.spriteWidth = 200;
         this.spriteHeight = 200;
-        this.width = 200;
-        this.height = 200;
+        this.width;
+        this.height;
         this.speedY = 0;
     }
     draw() {
