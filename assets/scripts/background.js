@@ -14,6 +14,7 @@ class Background {
     }
     draw() {
         this.game.ctx.drawImage(this.image, this.x, 0, this.scaledWidth, this.scaledHeight);
+        this.game.ctx.drawImage(this.image, this.x + this.scaledWidth - 2, 0, this.scaledWidth, this.scaledHeight);
     }
     resize() {
         this.scaledWidth = this.width * this.game.ratio;
