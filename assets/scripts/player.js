@@ -27,10 +27,15 @@ class Player {
         this.y = this.game.height * 0.5 - this.height * 0.5;
         this.speedY = -8 * this.game.ratio;
     }
+    isTouchingTop() {
+        return this.y <= 0;
+    }
     isTouchingBottom() {
         return this.y >= this.game.height - this.height;
     }
     flap() {
-        this.speedY = -5;
+        if (!this.isTouchingTop()) {
+            this.speedY = -5;
+        }
     }
 }
