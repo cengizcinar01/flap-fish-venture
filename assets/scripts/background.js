@@ -6,7 +6,10 @@ class Background {
         this.height = this.game.baseHeight;
         this.x;
     }
-    update() {}
+    update() {
+        this.x -= 0.5;
+        if (this.x <= -this.width) this.x = 0;
+    }
     draw() {
         this.game.ctx.drawImage(this.image, this.x, 0);
     }
