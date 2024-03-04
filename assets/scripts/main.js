@@ -9,6 +9,7 @@ class Game {
         this.background = new Background(this);
         this.player = new Player(this);
         this.gravity;
+        this.speed;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -37,6 +38,7 @@ class Game {
         this.ratio = this.height / this.baseHeight;
 
         this.gravity = 0.15 * this.ratio;
+        this.speed = 3;
         this.background.resize();
         this.player.resize();
     }
