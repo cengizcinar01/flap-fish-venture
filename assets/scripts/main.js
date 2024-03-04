@@ -18,6 +18,10 @@ class Game {
         this.canvas.addEventListener('mousedown', (e) => {
             this.player.flap();
         });
+        // keyboard control
+        window.addEventListener('keydown', (e) => {
+            if (e.key === '' || e.key === 'Enter') this.player.flap();
+        });
     }
     resize(width, height) {
         this.canvas.width = width;
