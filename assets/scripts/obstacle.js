@@ -11,4 +11,9 @@ class Obstacle {
     update() {
         this.x -= this.game.speed;
     }
+    draw() {}
+    resize() {
+        this.scaledWidth = this.spriteWidth * this.game.ratio;
+        this.scaledHeight = this.spriteHeight * this.game.ratio;
+    }
 }
