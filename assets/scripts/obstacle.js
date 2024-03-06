@@ -11,7 +11,9 @@ class Obstacle {
     update() {
         this.x -= this.game.speed;
     }
-    draw() {}
+    draw() {
+        this.game.ctx.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
+    }
     resize() {
         this.scaledWidth = this.spriteWidth * this.game.ratio;
         this.scaledHeight = this.spriteHeight * this.game.ratio;
