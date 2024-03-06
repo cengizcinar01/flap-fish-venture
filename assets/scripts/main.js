@@ -43,12 +43,20 @@ class Game {
         this.speed = 2 * this.ratio;
         this.background.resize();
         this.player.resize();
+        this.createObstacles();
+        this.obstacles.forEach((obstacle) => {
+            obstacle.resize();
+        });
     }
     render() {
         this.background.update();
         this.background.draw();
         this.player.update();
         this.player.draw();
+        this.obstacles.forEach((obstacle) => {
+            obstacle.update();
+            obstacle.draw();
+        });
     }
     createObstacles() {
         this.obstacles = [];
