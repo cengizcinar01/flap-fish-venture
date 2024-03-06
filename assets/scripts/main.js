@@ -8,6 +8,8 @@ class Game {
         this.ratio = this.height / this.baseHeight;
         this.background = new Background(this);
         this.player = new Player(this);
+        this.obstacles = [];
+        this.numberOfObstacles = 10;
         this.gravity;
         this.speed;
 
@@ -47,6 +49,14 @@ class Game {
         this.background.draw();
         this.player.update();
         this.player.draw();
+    }
+    createObstacles() {
+        this.obstacles = [];
+        const firstX = 100;
+        const obstacleSpacing = 100;
+        for (let i = 0; i < this.numberOfObstacles; i++) {
+            this.obstacles.push(new Obstacle(this, firstX + i * obstacleSpacing));
+        }
     }
 }
 
