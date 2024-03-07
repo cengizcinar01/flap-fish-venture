@@ -12,6 +12,9 @@ class Obstacle {
     update() {
         this.x -= this.game.speed;
         this.y += this.speedY;
+        if (this.y <= 0 || this.y >= this.game.height - this.scaledHeight) {
+            this.speedY *= -1;
+        }
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
