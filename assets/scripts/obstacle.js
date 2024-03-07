@@ -18,6 +18,8 @@ class Obstacle {
         }
         if (this.isOffScreen()) {
             this.markedForDeletion = true;
+            this.game.obstacles = this.game.obstacles.filter((obstacle) => !obstacle.markedForDeletion);
+            console.log(this.game.obstacles.length);
         }
     }
     draw() {
