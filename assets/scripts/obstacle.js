@@ -7,9 +7,11 @@ class Obstacle {
         this.scaledHeight = this.spriteHeight * this.game.ratio;
         this.x = x;
         this.y = this.game.height * 0.5 - this.scaledHeight;
+        this.speedY = 2;
     }
     update() {
         this.x -= this.game.speed;
+        this.y += this.speedY;
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
