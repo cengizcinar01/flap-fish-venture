@@ -7,7 +7,7 @@ class Obstacle {
         this.scaledHeight = this.spriteHeight * this.game.ratio;
         this.x = x;
         this.y = this.game.height * 0.5 - this.scaledHeight;
-        this.speedY = Math.random() < 0.5 ? -1 : 1;
+        this.speedY = Math.random() < 0.5 ? -1 * this.game.ratio : 1 * this.game.ratio;
     }
     update() {
         this.x -= this.game.speed;
