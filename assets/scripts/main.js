@@ -76,6 +76,8 @@ class Game {
     drawStatusText() {
         this.ctx.save();
         this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
+        this.ctx.textAlign = 'left';
+        this.ctx.fillText('Timer: ' + this.score, 10, 30);
         this.ctx.restore();
     }
 }
