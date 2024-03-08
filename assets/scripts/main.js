@@ -38,6 +38,7 @@ class Game {
         this.canvas.height = height;
         this.ctx.fillStyle = 'red';
         this.ctx.font = '15px Bungee';
+        this.ctx.textAlign = 'right';
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.ratio = this.height / this.baseHeight;
@@ -74,7 +75,6 @@ class Game {
     }
     drawStatusText() {
         this.ctx.save();
-        this.ctx.textAlign = 'right';
         this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
         this.ctx.restore();
     }
