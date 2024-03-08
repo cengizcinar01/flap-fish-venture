@@ -12,6 +12,8 @@ class Game {
         this.numberOfObstacles = 10;
         this.gravity;
         this.speed;
+        this.score;
+        this.gameOver;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -47,6 +49,8 @@ class Game {
         this.obstacles.forEach((obstacle) => {
             obstacle.resize();
         });
+        this.score = 0;
+        this.gameOver = false;
     }
     render() {
         this.background.update();
