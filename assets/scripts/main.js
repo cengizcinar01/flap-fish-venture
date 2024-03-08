@@ -37,6 +37,7 @@ class Game {
         this.canvas.width = width;
         this.canvas.height = height;
         this.ctx.fillStyle = 'red';
+        this.ctx.font = '15px Bungee';
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.ratio = this.height / this.baseHeight;
