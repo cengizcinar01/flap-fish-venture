@@ -31,6 +31,6 @@ class Obstacle {
         this.scaledHeight = this.spriteHeight * this.game.ratio;
     }
     isOffScreen() {
-        return this.x < 0;
+        return this.x < -this.scaledWidth;
     }
 }
