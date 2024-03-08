@@ -90,9 +90,12 @@ window.addEventListener('load', function () {
 
     const game = new Game(canvas, ctx);
 
-    function animate() {
+    let lastTime = 0;
+    function animate(timeStamp) {
+        const deltaTime = timeStamp - lastTime;
+        lastTime = timeStamp;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        game.render();
+        game.render(deltaTime);
         if (!game.gameOver) requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
