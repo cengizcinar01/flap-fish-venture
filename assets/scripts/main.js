@@ -14,6 +14,7 @@ class Game {
         this.speed;
         this.score;
         this.gameOver;
+        this.timer;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -53,8 +54,11 @@ class Game {
         });
         this.score = 0;
         this.gameOver = false;
+        this.timer = 0;
     }
-    render() {
+    render(deltaTime) {
+        console.log(deltaTime);
+        this.timer += deltaTime;
         this.background.update();
         this.background.draw();
         this.drawStatusText();
@@ -77,7 +81,7 @@ class Game {
         this.ctx.save();
         this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
         this.ctx.textAlign = 'left';
-        this.ctx.fillText('Timer: ' + this.score, 10, 30);
+        this.ctx.fillText('Timer: ' + this.timer, 10, 30);
         this.ctx.restore();
     }
 }
