@@ -77,11 +77,14 @@ class Game {
             this.obstacles.push(new Obstacle(this, firstX + i * obstacleSpacing));
         }
     }
+    formatTimer() {
+        return (this.timer * 0.001).toFixed(1);
+    }
     drawStatusText() {
         this.ctx.save();
         this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
         this.ctx.textAlign = 'left';
-        this.ctx.fillText('Timer: ' + this.timer, 10, 30);
+        this.ctx.fillText('Timer: ' + this.formatTimer(), 10, 30);
         this.ctx.restore();
     }
 }
