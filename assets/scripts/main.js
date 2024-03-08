@@ -55,6 +55,7 @@ class Game {
     render() {
         this.background.update();
         this.background.draw();
+        this.drawStatusText();
         this.player.update();
         this.player.draw();
         this.obstacles.forEach((obstacle) => {
@@ -69,6 +70,9 @@ class Game {
         for (let i = 0; i < this.numberOfObstacles; i++) {
             this.obstacles.push(new Obstacle(this, firstX + i * obstacleSpacing));
         }
+    }
+    drawStatusText() {
+        this.ctx.fillText('Score: ' + this.score, 10, 30);
     }
 }
 
