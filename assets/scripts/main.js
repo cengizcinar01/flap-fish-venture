@@ -57,8 +57,7 @@ class Game {
         this.timer = 0;
     }
     render(deltaTime) {
-        console.log(deltaTime);
-        this.timer += deltaTime;
+        if (!this.gameOver) this.timer += deltaTime;
         this.background.update();
         this.background.draw();
         this.drawStatusText();
@@ -86,6 +85,8 @@ class Game {
         this.ctx.textAlign = 'left';
         this.ctx.fillText('Timer: ' + this.formatTimer(), 10, 30);
         if (this.gameOver) {
+            this.ctx.textAlign = 'center';
+            this.ctx.font = '30px Bungee';
             this.ctx.fillText('GAME OVER', this.width * 0.5, this.height * 0.5);
         }
         this.ctx.restore();
