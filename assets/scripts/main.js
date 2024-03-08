@@ -73,7 +73,10 @@ class Game {
         }
     }
     drawStatusText() {
-        this.ctx.fillText('Score: ' + this.score, 10, 30);
+        this.ctx.save();
+        this.ctx.textAlign = 'right';
+        this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
+        this.ctx.restore();
     }
 }
 
