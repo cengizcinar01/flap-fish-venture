@@ -85,6 +85,9 @@ class Game {
         this.ctx.fillText('Score: ' + this.score, this.width - 10, 30);
         this.ctx.textAlign = 'left';
         this.ctx.fillText('Timer: ' + this.formatTimer(), 10, 30);
+        if (this.gameOver) {
+            this.ctx.fillText('GAME OVER', this.width * 0.5, this.height * 0.5);
+        }
         this.ctx.restore();
     }
 }
@@ -103,7 +106,7 @@ window.addEventListener('load', function () {
         lastTime = timeStamp;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         game.render(deltaTime);
-        if (!game.gameOver) requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
     }
     requestAnimationFrame(animate);
 });
