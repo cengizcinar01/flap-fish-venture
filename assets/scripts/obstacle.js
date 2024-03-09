@@ -16,6 +16,8 @@ class Obstacle {
     update() {
         this.x -= this.game.speed;
         this.y += this.speedY;
+        this.collisionX = this.x;
+        this.collisionY = this.y;
         if (this.y <= 0 || this.y >= this.game.height - this.scaledHeight) {
             this.speedY *= -1;
         }
@@ -29,6 +31,9 @@ class Obstacle {
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
+        this.game.ctx.beginnPath();
+        this.game.ctx.arc(this.collisionX, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
+        this.game.ctx.stroke();
     }
     resize() {
         this.scaledWidth = this.spriteWidth * this.game.ratio;
