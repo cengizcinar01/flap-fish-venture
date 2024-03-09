@@ -9,7 +9,7 @@ class Obstacle {
         this.y = Math.random() * (this.game.height * 0.5 - this.scaledHeight);
         this.collisionX;
         this.collisionY;
-        this.collisionRadius = this.scaledWidth;
+        this.collisionRadius = this.scaledWidth * 0.5;
         this.speedY = Math.random() < 0.5 ? -1 * this.game.ratio : 1 * this.game.ratio;
         this.markedForDeletion = false;
     }
