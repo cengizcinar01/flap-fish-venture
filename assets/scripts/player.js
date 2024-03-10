@@ -12,6 +12,7 @@ class Player {
         this.collisionX;
         this.collisionY;
         this.collisionRadius;
+        this.collided;
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
