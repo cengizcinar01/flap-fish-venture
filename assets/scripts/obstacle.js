@@ -31,7 +31,7 @@ class Obstacle {
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.scaledWidth, this.scaledHeight);
-        this.game.ctx.beginnPath();
+        this.game.ctx.beginPath();
         this.game.ctx.arc(this.collisionX, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
         this.game.ctx.stroke();
     }
