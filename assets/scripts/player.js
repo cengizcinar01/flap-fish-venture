@@ -24,6 +24,7 @@ class Player {
         this.game.ctx.stroke();
     }
     update() {
+        this.handleEnergy()
         this.y += this.speedY;
         this.collisionY = this.y + this.height * 0.5;
         if (this.y < this.game.height - this.height) {
@@ -48,6 +49,11 @@ class Player {
     }
     isTouchingBottom() {
         return this.y >= this.game.height - this.height;
+    }
+    handleEnergy() {
+        if (this.energy < this.maxEnergy) {
+            this.energy += 0.1;
+        }
     }
     flap() {
         if (!this.isTouchingTop()) {
