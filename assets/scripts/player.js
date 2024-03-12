@@ -24,7 +24,7 @@ class Player {
         this.game.ctx.stroke();
     }
     update() {
-        this.handleEnergy()
+        this.handleEnergy();
         this.y += this.speedY;
         this.collisionY = this.y + this.height * 0.5;
         if (this.y < this.game.height - this.height) {
@@ -45,11 +45,11 @@ class Player {
         this.collided = false;
     }
     startCharge() {
-
+        this.game.speed = this.game.maxSpeed;
     }
 
     stopCharge() {
-        
+        this.game.speed = this.game.minSpeed;
     }
     isTouchingTop() {
         return this.y <= 0;
