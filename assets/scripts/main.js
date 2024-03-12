@@ -32,6 +32,7 @@ class Game {
         // keyboard control
         window.addEventListener('keydown', (e) => {
             if (e.key === '' || e.key === 'Enter') this.player.flap();
+            if (e.key === 'Shift' || e.key.toLowerCase() === 'c') this.player.startCharge();
         });
         // touch controls
         this.canvas.addEventListener('touchstart', (e) => {
