@@ -44,6 +44,13 @@ class Player {
         this.collisionX = this.x + this.width * 0.5;
         this.collided = false;
     }
+    startCharge() {
+
+    }
+
+    stopCharge() {
+        
+    }
     isTouchingTop() {
         return this.y <= 0;
     }
