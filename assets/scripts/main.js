@@ -12,6 +12,8 @@ class Game {
         this.numberOfObstacles = 10;
         this.gravity;
         this.speed;
+        this.minSpeed;
+        this.maxSpeed;
         this.score;
         this.gameOver;
         this.timer;
