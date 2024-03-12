@@ -117,7 +117,7 @@ class Game {
             this.ctx.fillText("Press 'R' to try again!", this.width * 0.5, this.height * 0.5);
         }
         for (let i = 0; i < this.player.energy; i++) {
-            this.ctx.fillRect(10 + i * 6, 40, 5, 15);
+            this.ctx.fillRect(10, this.height - 10 - 2 * i, 15, 2);
         }
         this.ctx.restore();
     }
