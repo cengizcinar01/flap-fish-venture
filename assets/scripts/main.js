@@ -52,6 +52,8 @@ class Game {
 
         this.gravity = 0.15 * this.ratio;
         this.speed = 2 * this.ratio;
+        this.minSpeed = this.speed;
+        this.maxSpeed = this.speed * 5;
         this.background.resize();
         this.player.resize();
         this.createObstacles();
