@@ -73,6 +73,7 @@ class Player {
         }
     }
     flap() {
+        this.stopCharge();
         if (!this.isTouchingTop()) {
             this.speedY = -this.flapSpeed;
         }
