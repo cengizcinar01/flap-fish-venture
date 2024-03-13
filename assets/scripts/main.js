@@ -23,6 +23,7 @@ class Game {
         this.eventInterval = 150;
         this.eventUpdate = false;
         this.touchStartX;
+        this.swipeDistance = 50;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -44,7 +45,7 @@ class Game {
             this.touchStartX = e.changedTouches[0].pageX;
         });
         this.canvas.addEventListener('touchmove', (e) => {
-            if (e.changedTouches[0].pageX - this.touchStartX > 50) {
+            if (e.changedTouches[0].pageX - this.touchStartX > this.swipeDistance) {
                 this.player.startCharge();
             }
         });
