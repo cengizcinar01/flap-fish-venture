@@ -70,6 +70,7 @@ class Game {
     }
     render(deltaTime) {
         if (!this.gameOver) this.timer += deltaTime;
+        this.handlePeriodicEvents(deltaTime);
         this.background.update();
         this.background.draw();
         this.drawStatusText();
@@ -98,6 +99,15 @@ class Game {
 
     formatTimer() {
         return (this.timer * 0.001).toFixed(1);
+    }
+    handlePeriodicEvents(deltaTime) {
+        if (this.eventTimer < this.eventInterval) {
+            this.eventTimer += deltaTime;
+            this.eventUpdate = false;
+        } else {
+            this.eventTimer = 0;
+            this.eventUpdate = true;
+        }
     }
     drawStatusText() {
         this.ctx.save();
