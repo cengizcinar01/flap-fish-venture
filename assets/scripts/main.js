@@ -22,6 +22,7 @@ class Game {
         this.eventTimer = 0;
         this.eventInterval = 150;
         this.eventUpdate = false;
+        this.touchStartX;
 
         this.resize(window.innerWidth, window.innerHeight);
 
@@ -40,6 +41,12 @@ class Game {
         // touch controls
         this.canvas.addEventListener('touchstart', (e) => {
             this.player.flap();
+            this.touchStartX = e.changedTouches[0].pageX;
+        });
+        this.canvas.addEventListener('touchmove', (e) => {
+            if (e.changedTouches[0].pageX - this.touchStartX > 30) {
+                console.log('xxx');
+            }
         });
     }
     resize(width, height) {
