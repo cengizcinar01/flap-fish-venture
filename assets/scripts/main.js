@@ -44,8 +44,8 @@ class Game {
             this.touchStartX = e.changedTouches[0].pageX;
         });
         this.canvas.addEventListener('touchmove', (e) => {
-            if (e.changedTouches[0].pageX - this.touchStartX > 30) {
-                console.log('xxx');
+            if (e.changedTouches[0].pageX - this.touchStartX > 50) {
+                this.player.startCharge();
             }
         });
     }
