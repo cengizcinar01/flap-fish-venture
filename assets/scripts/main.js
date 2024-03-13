@@ -105,7 +105,7 @@ class Game {
             this.eventTimer += deltaTime;
             this.eventUpdate = false;
         } else {
-            this.eventTimer = 0;
+            this.eventTimer = this.eventTimer % this.eventInterval;
             this.eventUpdate = true;
         }
     }
