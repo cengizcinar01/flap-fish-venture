@@ -16,6 +16,7 @@ class Player {
         this.energy = 30;
         this.maxEnergy = this.energy * 2;
         this.minEnergy = 15;
+        this.barSize;
         this.charging;
     }
     draw() {
@@ -44,6 +45,7 @@ class Player {
         this.collisionRadius = this.width * 0.5;
         this.collisionX = this.x + this.width * 0.5;
         this.collided = false;
+        this.barSize = 5 * this.game.ratio;
     }
     startCharge() {
         this.charging = true;
