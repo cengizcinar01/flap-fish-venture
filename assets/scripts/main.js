@@ -19,6 +19,9 @@ class Game {
         this.timer;
         this.message1;
         this.message2;
+        this.eventTimer = 0;
+        this.eventInterval = 150;
+        this.eventUpdate = false;
 
         this.resize(window.innerWidth, window.innerHeight);
 
