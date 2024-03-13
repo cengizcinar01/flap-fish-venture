@@ -45,7 +45,7 @@ class Player {
         this.collisionRadius = this.width * 0.5;
         this.collisionX = this.x + this.width * 0.5;
         this.collided = false;
-        this.barSize = 5 * this.game.ratio;
+        this.barSize = Math.floor(5 * this.game.ratio);
     }
     startCharge() {
         this.charging = true;
