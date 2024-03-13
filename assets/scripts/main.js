@@ -119,7 +119,7 @@ class Game {
         if (this.player.energy <= 20) this.ctx.fillStyle = 'blue';
         else if (this.player.energy >= this.player.maxEnergy) this.ctx.fillStyle = 'orangered';
         for (let i = 0; i < this.player.energy; i++) {
-            this.ctx.fillRect(10, this.height - 10 - this.player.barSize * i, 15, this.player.barSize);
+            this.ctx.fillRect(10, this.height - 10 - this.player.barSize * i, this.player.barSize * 5, this.player.barSize);
         }
         this.ctx.restore();
     }
