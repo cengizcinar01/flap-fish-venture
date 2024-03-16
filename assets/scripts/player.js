@@ -18,6 +18,7 @@ class Player {
         this.minEnergy = 15;
         this.barSize;
         this.charging;
+        this.image = document.getElementById('player_fish');
     }
     draw() {
         this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
