@@ -13,6 +13,7 @@ class Obstacle {
         this.speedY = Math.random() < 0.5 ? -1 * this.game.ratio : 1 * this.game.ratio;
         this.markedForDeletion = false;
         this.image = document.getElementById('smallGears');
+        this.fameX = Math.floor(Math.random() * 4);
     }
     update() {
         this.x -= this.game.speed;
@@ -39,7 +40,7 @@ class Obstacle {
         }
     }
     draw() {
-        this.game.ctx.drawImage(this.image, 0, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.scaledWidth, this.scaledHeight);
+        this.game.ctx.drawImage(this.image, this.fameX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.scaledWidth, this.scaledHeight);
         this.game.ctx.beginPath();
         this.game.ctx.arc(this.collisionX, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
         this.game.ctx.stroke();
