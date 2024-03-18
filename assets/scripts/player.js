@@ -63,6 +63,23 @@ class Player {
         this.charging = false;
         this.game.speed = this.game.minSpeed;
     }
+
+    wingsIdle() {
+        this.frameY = 0;
+    }
+
+    wingsDown() {
+        this.frameY = 1;
+    }
+
+    wingsUp() {
+        this.frameY = 2;
+    }
+
+    wingsCharge() {
+        this.frameY = 3;
+    }
+
     isTouchingTop() {
         return this.y <= 0;
     }
