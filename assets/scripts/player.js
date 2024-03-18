@@ -57,6 +57,7 @@ class Player {
     startCharge() {
         this.charging = true;
         this.game.speed = this.game.maxSpeed;
+        this.wingsCharge();
     }
 
     stopCharge() {
