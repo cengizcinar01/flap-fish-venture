@@ -19,10 +19,10 @@ class Player {
         this.barSize;
         this.charging;
         this.image = document.getElementById('player_fish');
+        this.frameY;
     }
     draw() {
-        this.game.ctx.fillRect(this.x, this.y, this.width, this.height);
-        this.game.ctx.drawImage(this.image, 0, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
+        this.game.ctx.drawImage(this.image, 0, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
         this.game.ctx.beginPath();
         this.game.ctx.arc(this.collisionX, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
         this.game.ctx.stroke();
@@ -50,6 +50,7 @@ class Player {
         this.collisionX = this.x + this.width * 0.5;
         this.collided = false;
         this.barSize = Math.floor(5 * this.game.ratio);
+        this.frameY = 0;
     }
     startCharge() {
         this.charging = true;
