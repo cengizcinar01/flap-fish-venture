@@ -29,6 +29,7 @@ class Player {
     }
     update() {
         this.handleEnergy();
+        if (this.speedY >= 0) this.wingsUp();
         this.y += this.speedY;
         this.collisionY = this.y + this.height * 0.5;
         if (!this.isTouchingBottom() && !this.charging) {
