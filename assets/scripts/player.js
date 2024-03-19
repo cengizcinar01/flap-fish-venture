@@ -71,11 +71,11 @@ class Player {
     }
 
     wingsDown() {
-        this.frameY = 1;
+        if (!this.charging) this.frameY = 1;
     }
 
     wingsUp() {
-        this.frameY = 2;
+        if (!this.charging) this.frameY = 2;
     }
 
     wingsCharge() {
