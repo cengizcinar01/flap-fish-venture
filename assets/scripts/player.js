@@ -48,7 +48,7 @@ class Player {
         this.y = this.game.height * 0.5 - this.height * 0.5;
         this.speedY = -8 * this.game.ratio;
         this.flapSpeed = 5 * this.game.ratio;
-        this.collisionRadius = this.width * 0.5;
+        this.collisionRadius = 40 * this.game.ratio;
         this.collisionX = this.x + this.width * 0.5;
         this.collided = false;
         this.barSize = Math.floor(5 * this.game.ratio);
