@@ -42,6 +42,9 @@ class Game {
             if (e.key === '' || e.key === 'Enter') this.player.flap();
             if (e.key === 'Shift' || e.key.toLowerCase() === 'c') this.player.startCharge();
         });
+        window.addEventListener('keyup', (e) => {
+            this.player.wingsUp();
+        });
         // touch controls
         this.canvas.addEventListener('touchstart', (e) => {
             this.player.flap();
