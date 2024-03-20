@@ -107,6 +107,7 @@ class Player {
         this.stopCharge();
         if (!this.isTouchingTop()) {
             this.speedY = -this.flapSpeed;
+            this.wingsDown();
         }
     }
 }
