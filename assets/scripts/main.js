@@ -34,6 +34,9 @@ class Game {
         this.canvas.addEventListener('mousedown', (e) => {
             this.player.flap();
         });
+        this.canvas.addEventListener('mouseup', (e) => {
+            this.player.wingsUp();
+        });
         // keyboard control
         window.addEventListener('keydown', (e) => {
             if (e.key === '' || e.key === 'Enter') this.player.flap();
