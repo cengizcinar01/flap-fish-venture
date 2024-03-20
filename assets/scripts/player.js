@@ -39,6 +39,7 @@ class Player {
         }
         if (this.isTouchingBottom()) {
             this.y = this.game.height - this.height;
+            this.wingsIdle();
         }
     }
     resize() {
