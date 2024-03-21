@@ -24,7 +24,7 @@ class Player {
     draw() {
         this.game.ctx.drawImage(this.image, 0, this.frameY * this.spriteHeight, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
         this.game.ctx.beginPath();
-        this.game.ctx.arc(this.collisionX + 60, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
+        this.game.ctx.arc(this.collisionX + this.collisionRadius * 0.9, this.collisionY, this.collisionRadius, 0, Math.PI * 2);
         this.game.ctx.stroke();
     }
     update() {
