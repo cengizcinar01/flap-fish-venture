@@ -144,7 +144,7 @@ class Game {
             this.ctx.fillText(this.message2, this.width * 0.5, this.height * 0.5 - 20);
             this.ctx.fillText("Press 'R' to try again!", this.width * 0.5, this.height * 0.5);
         }
-        if (this.player.energy <= 20) this.ctx.fillStyle = 'blue';
+        if (this.player.energy <= this.player.minEnergy) this.ctx.fillStyle = 'blue';
         else if (this.player.energy >= this.player.maxEnergy) this.ctx.fillStyle = 'orangered';
         for (let i = 0; i < this.player.energy; i++) {
             this.ctx.fillRect(10, this.height - 10 - this.player.barSize * i, this.player.barSize * 5, this.player.barSize);
